@@ -115,7 +115,7 @@ secretsManager:
 probes:
   liveness:
     httpGet:
-      path: /health
+      path: /healthz
       port: 8000
     initialDelaySeconds: 15
     periodSeconds: 10
@@ -123,7 +123,7 @@ probes:
     failureThreshold: 3
   readiness:
     httpGet:
-      path: /health
+      path: /healthz
       port: 8000
     initialDelaySeconds: 5
     periodSeconds: 5
